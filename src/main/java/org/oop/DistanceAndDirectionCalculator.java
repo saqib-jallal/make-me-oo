@@ -1,5 +1,6 @@
 package org.oop;
-
+// Can be added inside Point-class itself as there will be encapsulation i.e, data and the methods acting on it are encapsulated in the same place.
+// Clean code - Redundant calculations can be removed.
 public class DistanceAndDirectionCalculator {
     public static double distance(Point from, Point to) {
         double xDistance = to.getX() - from.getX();

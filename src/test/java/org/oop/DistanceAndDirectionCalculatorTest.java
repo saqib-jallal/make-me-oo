@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import static org.oop.DistanceAndDirectionCalculator.direction;
 
 public class DistanceAndDirectionCalculatorTest {
-
+    // Can be renamed as PointTest.
     @Test
     void twoPointsWithSameXAndYCoordinatesShouldHaveADistanceOfZero() {
         Point origin = new Point(0, 0);
