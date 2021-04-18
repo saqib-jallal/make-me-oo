@@ -9,10 +9,13 @@ import static org.oop.Point.distance;
 public class PointTest {
     // Can be renamed as PointTest.
     @Test
-    void twoPointsWithSameXAndYCoordinatesShouldHaveADistanceOfZero() { // Split into AAA.
-        Point origin = new Point(0, 0);
-        Assertions.assertEquals(0, distance(origin, origin));
-        // Should have compared it by creating two Point-objects with same x and y coordinates.
+    void twoPointsWithSameXAndYCoordinatesShouldHaveADistanceOfZero() {
+        Point point1 = new Point(0, 0);
+        Point point2 = new Point(0, 0);
+
+        double distance = distance(point1, point2);
+
+        Assertions.assertEquals(0, distance);
     }
 
     @Test
