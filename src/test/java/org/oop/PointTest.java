@@ -3,8 +3,7 @@ package org.oop;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.oop.Point.direction;
-import static org.oop.Point.distance;
+import static org.oop.Point.*;
 
 public class PointTest {
     // Can be renamed as PointTest.
@@ -20,22 +19,23 @@ public class PointTest {
 
     @Test
     void distanceBetweenOriginAndPointsOnUnitCircleShouldBeOne() {
-        Point origin = new Point(0, 0);
-        Point point1 = new Point(1, 0);
-        Point point2 = new Point(0, 1);
+        Point origin = createOrigin();
+        Point pointOnUnitCircle = new Point(1, 0);
 
-        Assertions.assertEquals(1, distance(origin, point1));
-        Assertions.assertEquals(1, distance(origin, point2));
-        // Can have a factory method for creating point on unit circle under Point-class and can receive an argument ANGLE at which the point is to be created.
+        double distance = distance(origin, pointOnUnitCircle);
+
+        Assertions.assertEquals(1, distance);
+
     }
 
     @Test
     void distanceBetweenTwoOppositePointsOnUnitCircleShouldBeTwo() {
-        Point point1 = new Point(1, 0);
-        Point point2 = new Point(-1, 0);
+        Point pointOnUnitCircle1 = new Point(1, 0);
+        Point pointOnUnitCirlce2 = new Point(-1, 0);
 
-        Assertions.assertEquals(2, distance(point1, point2));
-        // Should have created two points using createPointOnUnitCircle(factory-method) by giving angles of 180deg off.
+        double distance = distance(pointOnUnitCircle1, pointOnUnitCirlce2);
+
+        Assertions.assertEquals(2, distance);
     }
 
     @Test

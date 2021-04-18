@@ -25,6 +25,10 @@ public class Point {
         this.y = y;
     }
 
+    public static Point createOrigin(){
+        return new Point(0,0);
+    }
+
     public static double distance(Point from, Point to) {
         double xDistance = getxDistance(from, to);
         double yDistance = getyDistance(from, to);
