@@ -40,14 +40,12 @@ public class PointTest {
 
     @Test
     void originAndPointOnPositiveXAxisShouldBeZeroRadiansAway() {
-        Point origin = new Point(0, 0);
-        Point point1 = new Point(1, 0);
-        Point point2 = new Point(3, 0);
+        Point origin = createOrigin();
+        Point pointOnPositiveX = createPointOnX(1);
 
-        Assertions.assertEquals(0, direction(origin, point1));
-        Assertions.assertEquals(0, direction(origin, point2));
-        // Can have a factory-method for creating a point on origin.
-        // Can have a factory-method for creating a point on x and/or y axis.
+        double direction = direction(origin, pointOnPositiveX);
+
+        Assertions.assertEquals(0, direction);
     }
 
     @Test
