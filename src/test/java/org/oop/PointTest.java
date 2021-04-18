@@ -3,14 +3,15 @@ package org.oop;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.oop.DistanceAndDirectionCalculator.direction;
+import static org.oop.Point.direction;
+import static org.oop.Point.distance;
 
-public class DistanceAndDirectionCalculatorTest {
+public class PointTest {
     // Can be renamed as PointTest.
     @Test
     void twoPointsWithSameXAndYCoordinatesShouldHaveADistanceOfZero() { // Split into AAA.
         Point origin = new Point(0, 0);
-        Assertions.assertEquals(0, DistanceAndDirectionCalculator.distance(origin, origin));
+        Assertions.assertEquals(0, distance(origin, origin));
         // Should have compared it by creating two Point-objects with same x and y coordinates.
     }
 
@@ -20,8 +21,8 @@ public class DistanceAndDirectionCalculatorTest {
         Point point1 = new Point(1, 0);
         Point point2 = new Point(0, 1);
 
-        Assertions.assertEquals(1, DistanceAndDirectionCalculator.distance(origin, point1));
-        Assertions.assertEquals(1, DistanceAndDirectionCalculator.distance(origin, point2));
+        Assertions.assertEquals(1, distance(origin, point1));
+        Assertions.assertEquals(1, distance(origin, point2));
         // Can have a factory method for creating point on unit circle under Point-class and can receive an argument ANGLE at which the point is to be created.
     }
 
@@ -30,7 +31,7 @@ public class DistanceAndDirectionCalculatorTest {
         Point point1 = new Point(1, 0);
         Point point2 = new Point(-1, 0);
 
-        Assertions.assertEquals(2, DistanceAndDirectionCalculator.distance(point1, point2));
+        Assertions.assertEquals(2, distance(point1, point2));
         // Should have created two points using createPointOnUnitCircle(factory-method) by giving angles of 180deg off.
     }
 
