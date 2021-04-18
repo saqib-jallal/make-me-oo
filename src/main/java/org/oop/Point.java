@@ -33,6 +33,10 @@ public class Point {
         return new Point(x, 0);
     }
 
+    public static Point createPointOnY(int y){
+        return new Point(0, y);
+    }
+
     public static double distance(Point from, Point to) {
         double xDistance = getxDistance(from, to);
         double yDistance = getyDistance(from, to);
