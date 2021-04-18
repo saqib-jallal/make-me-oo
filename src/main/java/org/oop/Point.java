@@ -38,22 +38,22 @@ public class Point {
     }
 
     public static double distance(Point from, Point to) {
-        double xDistance = getxDistance(from, to);
-        double yDistance = getyDistance(from, to);
+        double xDistance = getXDistance(from, to);
+        double yDistance = getYDistance(from, to);
         return Math.sqrt(Math.pow(xDistance, 2) + Math.pow(yDistance, 2));
     }
 
     public static double direction(Point from, Point to) {
-        double xDistance = getxDistance(from, to);
-        double yDistance = getyDistance(from, to);
+        double xDistance = getXDistance(from, to);
+        double yDistance = getYDistance(from, to);
         return Math.atan2(yDistance, xDistance);
     }
 
-    private static double getyDistance(Point from, Point to) {
+    private static double getYDistance(Point from, Point to) {
         return to.getY() - from.getY();
     }
 
-    private static double getxDistance(Point from, Point to) {
+    private static double getXDistance(Point from, Point to) {
         return to.getX() - from.getX();
     }
 }
