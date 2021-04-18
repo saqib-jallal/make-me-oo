@@ -29,6 +29,10 @@ public class Point {
         return new Point(0,0);
     }
 
+    public static Point createPointOnX(int x){
+        return new Point(x, 0);
+    }
+
     public static double distance(Point from, Point to) {
         double xDistance = getxDistance(from, to);
         double yDistance = getyDistance(from, to);
