@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import static org.oop.Point.*;
 
 public class PointTest {
-    // Can be renamed as PointTest.
+
     @Test
     void twoPointsWithSameXAndYCoordinatesShouldHaveADistanceOfZero() {
         Point point1 = new Point(0, 0);
@@ -31,9 +31,9 @@ public class PointTest {
     @Test
     void distanceBetweenTwoOppositePointsOnUnitCircleShouldBeTwo() {
         Point pointOnUnitCircle1 = new Point(1, 0);
-        Point pointOnUnitCirlce2 = new Point(-1, 0);
+        Point pointOnUnitCircle2 = new Point(-1, 0);
 
-        double distance = distance(pointOnUnitCircle1, pointOnUnitCirlce2);
+        double distance = distance(pointOnUnitCircle1, pointOnUnitCircle2);
 
         Assertions.assertEquals(2, distance);
     }
@@ -49,13 +49,13 @@ public class PointTest {
     }
 
     @Test
-    void originAndPointOnNegativeXAxisShouldBePiRadiansAway() { // Rename the method
-        Point origin = new Point(0, 0);
-        Point point1 = new Point(-1, 0);
-        Point point2 = new Point(-3, 0);
+    void originAndPointOnNegativeXAxisShouldBePiRadiansAway() {
+        Point origin = createOrigin();
+        Point pointOnNegativeX = createPointOnX(-1);
 
-        Assertions.assertEquals(Math.PI, direction(origin, point1));
-        Assertions.assertEquals(Math.PI, direction(origin, point2));
+        double direction = direction(origin, pointOnNegativeX);
+
+        Assertions.assertEquals(Math.PI, direction);
     }
 
     @Test
