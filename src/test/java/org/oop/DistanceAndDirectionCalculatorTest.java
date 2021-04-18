@@ -8,7 +8,7 @@ import static org.oop.DistanceAndDirectionCalculator.direction;
 public class DistanceAndDirectionCalculatorTest {
     // Can be renamed as PointTest.
     @Test
-    void twoPointsWithSameXAndYCoordinatesShouldHaveADistanceOfZero() {
+    void twoPointsWithSameXAndYCoordinatesShouldHaveADistanceOfZero() { // Split into AAA.
         Point origin = new Point(0, 0);
         Assertions.assertEquals(0, DistanceAndDirectionCalculator.distance(origin, origin));
         // Should have compared it by creating two Point-objects with same x and y coordinates.
@@ -47,7 +47,7 @@ public class DistanceAndDirectionCalculatorTest {
     }
 
     @Test
-    void originAndPointOnNegativeXAxisShouldBePiRadiansAway() {
+    void originAndPointOnNegativeXAxisShouldBePiRadiansAway() { // Rename the method
         Point origin = new Point(0, 0);
         Point point1 = new Point(-1, 0);
         Point point2 = new Point(-3, 0);
